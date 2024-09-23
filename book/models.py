@@ -30,4 +30,4 @@ class Reservation(models.Model):
         ordering = ["reservation_date", "reservation_time"]
 
     def __str__(self):
-        return f"{self.restaurant} | {self.reservation_date} | {self.reservation_time} | {self.user} | ({self.party_size})"
+        return f"{self.restaurant} | {self.reservation_date} | {self.reservation_time} | ({self.party_size}) | {self.user} | {self.requirements} | {self.status}"
