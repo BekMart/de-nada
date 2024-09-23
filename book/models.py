@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-STATUS = ((0, "Pending"), (1, "Confirmed"), (2, "Cancelled"))
+STATUS = ((0, "Pending"), (1, "Confirmed"), (2, "Declined"), (3, "Cancelled"))
 
 # Create your models here.
 class Restaurant(models.Model):
@@ -10,9 +10,8 @@ class Restaurant(models.Model):
     phone_number = models.CharField(max_length=20)
     email = models.EmailField()
     description = models.TextField()
-    image = models.ImageField(upload_to='restaurant_images', null=True, blank=True)
-    tables = models.IntegerField(max_length=20)
     capacity = models.IntegerField(default=80)
+    tables = models.IntegerField(default=20)
 
 class Reservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
