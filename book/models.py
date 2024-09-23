@@ -13,6 +13,9 @@ class Restaurant(models.Model):
     capacity = models.IntegerField(default=80)
     tables = models.IntegerField(default=20)
 
+    def __str__(self):
+        return f"{self.name}"
+
 class Reservation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
@@ -25,3 +28,6 @@ class Reservation(models.Model):
 
     class Meta:
         ordering = ["reservation_date", "reservation_time"]
+
+    def __str__(self):
+        return f"{self.restaurant} | {self.reservation_date} | {self.reservation_time} | {self.user} | ({self.party_size})"
