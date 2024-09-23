@@ -19,5 +19,6 @@ class Reservation(models.Model):
     party_size = models.IntegerField()
     reservation_date = models.DateField()
     reservation_time = models.TimeField()
+    requirements = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
