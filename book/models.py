@@ -24,4 +24,4 @@ class Reservation(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
-        ordering = ["reservation_date"]
+        ordering = ["reservation_date", "reservation_time"]
