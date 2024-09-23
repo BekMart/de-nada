@@ -22,3 +22,6 @@ class Reservation(models.Model):
     requirements = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        ordering = ["reservation_date"]
