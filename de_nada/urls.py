@@ -22,6 +22,6 @@ from book.views import booktable
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('book/', booktable, name='book'),
-    path('home/', homepage, name='home'),
+    path('', homepage, name='home'),
     path('summernote/', include('django_summernote.urls')),
 ]

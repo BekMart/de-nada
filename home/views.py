@@ -1,6 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 def homepage(request):
-    return HttpResponse("Are we all linked up?")
+    print("About to render template")
+
+    return render(
+        request,
+        "home/index.html",
+    )
