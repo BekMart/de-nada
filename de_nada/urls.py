@@ -19,11 +19,13 @@ from django.urls import path, include
 from home.views import homepage
 from book.views import booktable
 from menu.views import displaymenu
+from contact.views import contactpage
 
 urlpatterns = [
     path('', homepage, name='home'),
     path('admin/', admin.site.urls),
     path('book/', booktable, name='book'),
+    path('contact/', contactpage, name='contact'),
     path('menu/', displaymenu, name='menu'),
     path('summernote/', include('django_summernote.urls')),
 ]
