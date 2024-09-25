@@ -1,3 +1,170 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+
+/* Asterisk wildcard selector to override default styles added by browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
 body {
-    background-color: rgb(124, 124, 218);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project style */
+    background-color: rgb(166, 129, 200);
+    color: blanchedalmond;
+    font-family: 'Vidaloka', serif;
+    font-size: larger;
+    font-weight: 300;
+}
+
+/* Links in body */
+body a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* Header */
+header {
+    background-color: blanchedalmond;
+    min-height: 110px;
+    max-height: 300px;
+    padding: 0.5rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Logo */
+#logo {
+    text-transform: uppercase;
+    font-size: 320%;
+    font-weight: 700;
+    padding: 0 10vw;
+}
+
+/* Slogan */
+#slogan {
+    font-size: smaller;
+    color: #4C3825;
+    position: absolute;
+    bottom: 15px;
+}
+
+/* Navbar */
+#nav-menu {
+    font-size: 100%;
+    list-style-type: none;
+    font-weight: 500;
+    padding: 0 10px;
+    text-align: left;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+/* Line under current page */
+.active {
+    border-bottom: 2px solid #4C3825;
+}
+
+/* Navbar styles with drop down toggle */
+nav {
+    position: absolute;
+    background-color: #F3EADC;
+    width: 40%;
+    padding: 0.5em;
+    right: 0;
+    display: none;
+    top: 100%;
+    text-align: center;
+}
+
+/* Nav Toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+/* Hide nav toggle menu until label clicked */
+#nav-toggle {
+    display: none;
+    position: relative;
+}
+
+.nav-toggle-label {
+    color: #cd7727;
+    font-size: 200%;
+    position: absolute;
+    top: 30%;
+    right: 10px;
+}
+
+/* Hidden headers */
+.hidden-text {
+    display: none;
+}
+
+/* Hero image */
+#hero {
+    background-color: coral;
+    width: 100%; 
+    height: auto;
+    min-height: 250px;
+}
+
+/* Main Content */
+main {
+    color: #F3EADC;
+    background-color: #4C3825;
+    /* Make main element take up any surplus space to push the footer down */
+    flex: 1 0 auto;
+    /* Push the start of element down so it isn't hidden by header */
+    margin-top: 110px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #dd5aa5;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: small;
+    font-weight: 500;
+}
+
+/* Opening times */
+#opening-times {
+    text-align: left;
+    margin: 10px;
+}
+
+#opening-times li {
+    list-style-type: none;
+}
+
+/* Copyright section */
+#copyright {
+    text-align: right;
+    margin: 10px;
+}
+
+/* Social newtork icons */
+#social-networks {
+    display: flex;
+    align-self: center;
+    padding: 2px 20px 0;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 150%;
+    padding: 2px;
+    color: #b3d80d;
+    margin-bottom: 0;
 }

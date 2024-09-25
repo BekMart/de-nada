@@ -1,7 +1,9 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'menu' as menu_url %}
 {% url 'book' as book_url %}
+{% url 'contact' as contact_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +18,19 @@
     <title>De Nada</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="">
+
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -26,6 +41,7 @@
         <a href="{% url 'home' %}">
             <h1 id="logo">De Nada</h1>
         </a>
+        <div id="slogan">connect ~ share ~ grow</div>
         <!-- Navbar -->
         <input type="checkbox" id="nav-toggle" name="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">
@@ -33,10 +49,10 @@
         </label>
         <nav>
             <ul id="nav-menu">
-                <li><a href="{% url 'home' %}" class="active">HOME.</a></li>
-                <li><a href="{% url 'menu' %}">MENU.</a></li>
-                <li><a href="{% url 'book' %}">BOOK.</a></li>
-                <li><a href="{% url 'contact' %}">CONTACT.</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'book' %}">Book</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -50,32 +66,44 @@
     </main>
     <!-- Footer -->
     <footer>
-        <section id="opening-times">
-            <h2>Opening times:</h2>
-            <ul>
-                <li>Sun - Thu: 08:00 - 21:00</li>
-                <li>Fri & Sat: 08:00 - 00:00</li>
-            </ul>
-        </section>
-        <section id="copyright">
-            <h2 class="hidden-text">Copyright</h2>
-            <p>© Copyright 2024 <br>
-                BekMart</p>
-        </section>
-        <ul id="social-networks">
-            <li><a href="https://www.facebook.com/" target="_blank"
-                    aria-label="Visit our Facebook page (opens in new tab)" rel="noopener">
-                    <i class="fa-brands fa-facebook"></i></a>
-            </li>
-            <li><a href="https://www.instagram.com/" target="_blank"
-                    aria-label="Visit our Instagram page (opens in new tab)" rel="noopener">
-                    <i class="fa-brands fa-square-instagram"></i></a>
-            </li>
-            <li><a href="https://twitter.com/" target="_blank"
-                    aria-label="Visit our Twitter page (opens in new tab)" rel="noopener">
-                    <i class="fa-brands fa-square-x-twitter"></i></a>
-            </li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <section id="opening-times">
+                        <h4>Opening times:</h4>
+                        <ul>
+                            <li>Sun - Thu: 08:00 - 21:00</li>
+                            <li>Fri & Sat: 08:00 - 00:00</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-4">
+                    <section id="copyright">
+                        <h2 class="hidden-text">Copyright</h2>
+                        <p>© Copyright 2024 <br>
+                            BekMart</p>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul id="social-networks">
+                        <li><a href="https://www.facebook.com/" target="_blank"
+                                aria-label="Visit our Facebook page (opens in new tab)" rel="noopener">
+                                <i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/" target="_blank"
+                                aria-label="Visit our Instagram page (opens in new tab)" rel="noopener">
+                                <i class="fa-brands fa-square-instagram"></i></a>
+                        </li>
+                        <li><a href="https://twitter.com/" target="_blank"
+                                aria-label="Visit our Twitter page (opens in new tab)" rel="noopener">
+                                <i class="fa-brands fa-square-x-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
     <!-- Font Awesome icon link -->
     <script src="https://kit.fontawesome.com/7e995090f4.js" crossorigin="anonymous"></script>
