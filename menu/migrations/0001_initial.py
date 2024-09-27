@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=200, unique=True)),
-                ('drink', models.CharField()),
+                ('type', models.CharField()),
                 ('cost', models.FloatField()),
                 ('calories', models.IntegerField()),
                 ('vegetarian', models.BooleanField()),
@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=200, unique=True)),
-                ('food', models.CharField()),
+                ('type', models.CharField()),
                 ('cost', models.FloatField()),
                 ('calories', models.IntegerField()),
                 ('vegetarian', models.BooleanField()),
