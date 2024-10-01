@@ -168,3 +168,33 @@ footer {
     color: #b3d80d;
     margin-bottom: 0;
 }
+
+/* Menu Page */
+#drink-menu {
+    background-color: rgb(150, 213, 192);
+    color: rgb(23, 26, 200);
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline 4px;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-calories {
+    float: left;
+}
+
+.calories {
+    font-size: x-small;
+}
+
+.cost {
+    float: right;
+}

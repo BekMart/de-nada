@@ -8,5 +8,22 @@
     <div class="row">
         <h1>TAKE A LOOK AT OUR MENU</h1>
     </div>
+    <div id="drink-menu" class="col-12">
+        <h2>Beverages</h2>
+        <div class="container">
+            <div class="row">
+                <ul>
+                    {% for beverage in beverages %}
+                    <li>
+                        <span class="title-calories">{{ beverage.title }}<span class="calories">
+                                ({{ beverage.calories }})</span></span>
+                        <span class="cost">{{ beverage.cost }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
